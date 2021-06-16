@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title> COLORSTORY</title>
+       
+        <link rel="stylesheet" href="css/index.css">
+        <script type="text/javascript" src="javascript/models/colorStory.js"></script>
+        <script type="text/javascript" src="javascript/services/API.js"></script>
+        <script type="text/javascript" src="javascript/index.js"></script>
+
+    </head>
+
+    <body>
+        <!--TITLE-->
+        <h1  style="text-align:center"> COLORSTORY</h1>
+
+        <!--//FORM -->
+        <div class="container">
+            <form class="add-color-story">
+              <h4>Select A Color</h4>
+              <input
+              type="text"
+              name="color_code"
+              value=""
+              placeholder="Enter Hex color code..."
+              class="input-text"
+              ></input>
+
+              <label for="colorpicker">Select a Color: </label>
+              <input type="color" id="colorpicker" value="#0000ff">
+
+              <h4>Title</h4>
+              <input
+              type="text"
+              name="title"
+              value=""
+              placeholder="Enter a title"
+              class="input-text"
+              ></input>
+      
+              <h4>Description</h4>
+              <textarea  
+              type="text"
+              name="description"
+              value=""
+              placeholder="Enter a description"
+              class="input-description">
+              </textarea>
+             
+      
+              <br><br>
+              <input
+                type="submit"
+                name="submit"
+                value="Post Story"
+                class="submit"
+              />
+            </form>
+          </div>
+
+         <!-- //CREATE BUTTON--> 
+        <div align ="center">
+        <button  id="new-color-story">Create a Color Story</button>
+        </div>
+       
+        <!-- this is where you will append all of the color stories --> 
+        <div id="all-color-stories">
+
+        </div>
+
+    </body>
+
+</html>
