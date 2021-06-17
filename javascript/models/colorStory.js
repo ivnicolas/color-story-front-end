@@ -26,7 +26,6 @@ class ColorStory{
 
     showHTML(){
         return `
-
                 <h3 class="title">${this.title}</h3>
                 <h5 class= "description">${this.description}</h5>
                 <h6>
