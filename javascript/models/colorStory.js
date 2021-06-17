@@ -22,13 +22,28 @@ class ColorStory{
         colorStoryContainer.classList.add= "color-story-card"
         colorStoryContainer.innerHTML += this.showHTML()
         colorStoryHolder.appendChild(colorStoryContainer)
+      
     }
 
     showHTML(){
         return `
-                <h3 class="title">${this.title}</h3>
-                <h5 class= "description">${this.description}</h5>
-                <button data-id= ${this.id}>Edit</button> <button data-id= ${this.id}>Delete</button> <button data-id= ${this.id}>Like</button>
+
+        <div class="card" style="background-color: ${this.color_code}">
+            <di class="card-footer">
+                <div>
+                    <h2 class="card-title" >${this.title.toUpperCase()}</h2>
+                </div>
+             </di>
+        </div>
+         <br><br>      
+                
+                
                 `
     }
 }
+
+
+
+
+//<h5 class= "description">${this.description}</h5>
+                // <button data-id= ${this.id}>Edit</button> <button data-id= ${this.id}>Delete</button> <button data-id= ${this.id}>Like</button>

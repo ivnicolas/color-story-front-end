@@ -12,7 +12,8 @@
 #title{
     color: red;
     font-family: "Helvetica Neue";
-    font-weight: bold
+    font-weight: bold;
+    font-size: 100px;
 }
 
 
@@ -27,7 +28,7 @@ body {
    }
    
    .card {
-    background-color: pink;
+    
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -51,5 +52,18 @@ body {
      padding-left: 15px;
      font-family: "Helvetica Neue";
      font-weight: bold;
-     font-size: 12px
+     font-size: 18px
    }
+
+   .grid-styling{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+  }
