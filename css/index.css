@@ -11,5 +11,45 @@
 
 #title{
     color: red;
-    font-family: Helvetica 
+    font-family: "Helvetica Neue";
+    font-weight: bold
 }
+
+
+body {
+    background-color: rgb(247, 244, 244);
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    line-height: 1.4; */
+     
+   }
+   
+   .card {
+    background-color: pink;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 200px;
+    height: 300px;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.315);}
+   .card-footer {
+     width: 200px;
+     height: 80px;
+     background-color: white;
+     display: flex;
+     align-items: center;
+     padding: 0px;
+     @include bottom();
+     bottom: 0;
+     position: absolute;
+     right: 0;
+     left: 0;}
+   .card-title{
+     padding-left: 15px;
+     font-family: "Helvetica Neue";
+     font-weight: bold;
+     font-size: 12px
+   }

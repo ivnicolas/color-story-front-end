@@ -28,7 +28,6 @@ class ColorStory{
         return `
                 <h3 class="title">${this.title}</h3>
                 <h5 class= "description">${this.description}</h5>
-                <h6>
                 <button data-id= ${this.id}>Edit</button> <button data-id= ${this.id}>Delete</button> <button data-id= ${this.id}>Like</button>
                 `
     }
