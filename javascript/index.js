@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded",function(){
     });
 
 
-    // get fetch request 
+    // POSTING A NEW COLOR STORY 
 
     const newColorStory = document.querySelector(".add-color-story")
 
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded",function(){
         const color = event.target.colorpicker.value
         const user = event.target.user_name.value 
 
-          
+         // Can/Should I refactor this to the API)  
         fetch(url,{
             method: "POST",
             headers: { "Content-Type": "application/json"}, //syntax
@@ -62,54 +62,32 @@ document.addEventListener("DOMContentLoaded",function(){
                 something.likes , 
                 something.color_code
             )
-            // colorStory.id = something.id
-            // colorStory.user_id = something.user_id 
-            // colorStory.title = something.title
-            // colorStory.description = something.description
-            // colorStory.likes = 0
-            // colorStory.color_code = something.color_code
-
-            // colorStory.renderColorStory()
-            
             
         })
-    
-
         event.target.reset()
-  
-        // fetch(url, {
-      
-        //     method: "POST",
-        //     headers: { "Content-Type": "application/json"},
-        //     body: JSON.stringify({ 
-        //       "title": title,
-        //       "description": description,
-        //     //   "likes": 0
-        //       /* WHAT WE ARE POSTING */
-        //     })
-        
-        //   })
-        //   .then(response => response.json())
-        //   .then(theThingWePostedButFromTheServer => new ColorStory (theThingWePostedButFromTheServer) )
+    })
+
+
+    //LIKE BUTTONE 
+
+    const allCards = document.querySelector("#all-color-stories")
+    
     
 
+    allCards.addEventListener("click", function(e){
+
+     if (e.target.className == "large material-icons heart-icon"){
+        let likes = parseInt(e.target.parentElement.querySelector(".like-count").innerText)
+        let new_likes = likes +1
+        e.target.parentElement.querySelector(".like-count").innerText = new_likes
+     } 
+     
+     
+     
+    });
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    })
 //closing 
 })

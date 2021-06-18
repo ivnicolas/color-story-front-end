@@ -67,3 +67,7 @@ body {
     align-content: space-evenly;
     align-items: center;
   }
+
+  i.heart-icon {
+    color: red;
+}

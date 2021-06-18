@@ -17,6 +17,8 @@ class ColorStory{
         const colorStoryHolder = document.getElementById("all-color-stories")
         const colorStoryContainer = document.createElement("div")
 
+
+        //explain this tidbit right here pls 
         colorStoryContainer.dataset.id = this.id 
         colorStoryContainer.id = this.id 
         colorStoryContainer.classList.add= "color-story-card"
@@ -29,6 +31,7 @@ class ColorStory{
         return `
 
         <div class="card" style="background-color: ${this.color_code}">
+        <i class="large material-icons heart-icon">favorite</i><p class= "like-count">${this.likes}</p>
             <di class="card-footer">
                 <div>
                     <h2 class="card-title" >${this.title.toUpperCase()}</h2>
@@ -39,6 +42,10 @@ class ColorStory{
                 
                 
                 `
+    }
+
+    addLike(){
+
     }
 }
 
