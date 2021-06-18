@@ -20,7 +20,7 @@
                 )
             }
         )
-        
+        // .then(()=> ColorStory.likeMe())
     }
 
     static createStories(){

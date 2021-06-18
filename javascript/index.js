@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded",function(){
     // load in the color stories that already exist 
     API.addStories()
 
+
+
+    //**FORM TOGGLE
     // create toggle to display/hide form 
     const formContainer = document.querySelector(".container");
     const addBtn = document.querySelector("#new-color-story");
@@ -27,6 +30,8 @@ document.addEventListener("DOMContentLoaded",function(){
       }
 
     });
+
+// END FORM 
 
 
     // POSTING A NEW COLOR STORY 
@@ -67,6 +72,8 @@ document.addEventListener("DOMContentLoaded",function(){
         event.target.reset()
     })
 
+    //END OF NEW POSTING
+
 
     //LIKE BUTTONE 
 
@@ -76,18 +83,40 @@ document.addEventListener("DOMContentLoaded",function(){
 
     allCards.addEventListener("click", function(e){
 
-     if (e.target.className == "large material-icons heart-icon"){
+        const postID = e.target.parentElement.parentElement.id
+        
         let likes = parseInt(e.target.parentElement.querySelector(".like-count").innerText)
+
+        // why no work
+        // likes = likes+1 
+
         let new_likes = likes +1
         e.target.parentElement.querySelector(".like-count").innerText = new_likes
-     } 
+
+        const postObj = {
+            likes: new_likes
+          }
+
+        const link = `${url}/${postID}`
+
+        fetch (link, {
+            method: "PATCH",
+            headers: {
+              "Accept": 'application/json',
+              "Content-Type": 'application/json'
+            },
+            body: JSON.stringify ({
+              likes: new_likes
+            })
+          })
      
-     
-     
+
     });
 
 
-
+//END OF LIKE BUTTON 
 
 //closing 
+    
+
 })
